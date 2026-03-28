@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#FAF8F3">
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#0D3B2E"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eco Points: 0"
+        android:textSize="18sp"
+        android:textColor="#1A5C45"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Logout"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0D3B2E"/>
+
+</LinearLayout>
