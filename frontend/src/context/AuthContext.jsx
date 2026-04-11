@@ -7,7 +7,6 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Restore user from localStorage on app start
     const token = localStorage.getItem('token');
     const name = localStorage.getItem('name');
     const email = localStorage.getItem('email');
@@ -33,13 +32,26 @@ export function AuthProvider({ children }) {
     setUser((prev) => ({ ...prev, name: data.name, points: data.points ?? 0 }));
   };
 
+  const updatePoints = (newPoints) => {
+    localStorage.setItem('points', newPoints);
+    setUser((prev) => ({ ...prev, points: newPoints }));
+  };
+
   const logout = () => {
     localStorage.clear();
     setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout, updateUser }}>
+    <AuthContext.Provider value={{
+      user,
+      setUser,
+      loading,
+      login,
+      logout,
+      updateUser,
+      updatePoints
+    }}>
       {children}
     </AuthContext.Provider>
   );

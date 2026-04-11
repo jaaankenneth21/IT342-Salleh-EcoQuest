@@ -46,4 +46,10 @@ export const userApi = {
   updateProfile: (data) => api.put('/user/profile', data),
 };
 
+// Quest API
+export const questApi = {
+  getAllQuests: () => api.get('/quests'),
+  completeQuest: (id) => api.post(`/quests/${id}/complete`),
+};
+
 export default api;

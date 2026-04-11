@@ -17,6 +17,7 @@ export default function Navbar() {
       </NavLink>
       <nav>
         <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink to="/quests">Quests</NavLink>
         <NavLink to="/profile">Profile</NavLink>
         <button onClick={handleLogout} className="logout-btn">
           Log out
